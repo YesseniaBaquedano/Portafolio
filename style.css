@@ -1,0 +1,317 @@
+/* Colores kawaii pastel */
+:root {
+  --durazno: #FFB5A7;
+    --rosa: #FFC2C7;
+    --amarillo: #FFF2CC;
+    --verde: #a5d6a6;
+    --blanco: #FFFFFF;
+    --texto: #8B4513;
+    --morado: #D8B4E2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body {
+  background: var(--crema);
+  color: var(--marron);
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  background: var(--rosa);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid var(--durazno);
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--marron);
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+    min-height: 70vh;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(170, 233, 170);
+}
+
+/* Elementos decorativos flotantes */
+
+.floating-peach {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: var(--durazno);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1; 
+}
+
+.floating-peach:before {
+    content: '🍑';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+/* Duraznos posicionados para no tapar contenido - Solo en espacios vacíos */
+.floating-peach:nth-child(1) { top: 15%; left: 8%; animation-delay: 0s; }
+.floating-peach:nth-child(2) { top: 8%; right: 30%; animation-delay: 2s; }
+.floating-peach:nth-child(3) { top: 45%; left: 5%; animation-delay: 4s; }
+.floating-peach:nth-child(4) { top: 75%; right: 15%; animation-delay: 1s; }
+.floating-peach:nth-child(5) { top: 85%; right: 45%; animation-delay: 3s; }
+.floating-peach:nth-child(6) { top: 70%; left: 70%; animation-delay: 5s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Perfil circular con decoración */
+.profile-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    position: relative;
+    width: 280px;
+    height: 280px;
+}
+
+.profile-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid var(--blanco);
+    background: var(--rosa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.profile-decoration:before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    border: 3px dashed var(--blanco);
+    opacity: 0.6;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 6px solid var(--blanco);
+    object-fit: cover;
+    z-index: 2;
+    position: relative;
+}
+
+/* Contenido de texto */
+.content-section {
+    flex: 1;
+    padding-left: 40px;
+    max-width: 500px;
+}
+
+.speech-bubble {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.speech-bubble:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent var(--blanco) transparent transparent;
+}
+
+/* Tarjetas de características */
+.feature-cards {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.feature-card {
+    background: var(--amarillo);
+    padding: 20px 15px;
+    border-radius: 20px;
+    text-align: center;
+    width: 120px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 3px solid var(--blanco);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card:nth-child(2) {
+    background: var(--morado);
+}
+
+.feature-card:nth-child(3) {
+    background: var(--durazno);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.feature-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Projects */
+.projects {
+  padding: 40px 20px;
+  background: var(--amarillo);
+  text-align: center;
+}
+
+.project-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.p-card {
+  background: var(--blanco);
+  padding: 20px;
+  border-radius: 15px;
+  width: 220px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.p-card h3 {
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--durazno);
+  color: rgb(156, 156, 156);
+  padding: 6px 12px;
+  border-radius: 10px;
+  margin: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--marron);
+}
+
+/* Contact */
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--rosa);
+}
+
+.contact button {
+  background: var(--durazno);
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: var(--marron);
+  color: rgb(179, 175, 175);
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: var(--rosa);
+  padding: 15px;
+  text-align: center;
+  border-top: 4px solid var(--durazno);
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit; 
+  
+}
+
