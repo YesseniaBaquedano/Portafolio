@@ -1,4 +1,4 @@
-/* Colores kawaii pastel */
+/* Colores */
 :root {
   --durazno: #FFB5A7;
     --rosa: #FFC2C7;
@@ -56,7 +56,7 @@ header nav a {
     background-color: rgb(170, 233, 170);
 }
 
-/* Elementos decorativos flotantes */
+/* duraznos flotantes */
 
 .floating-peach {
     position: absolute;
@@ -78,7 +78,7 @@ header nav a {
     font-size: 24px;
 }
 
-/* Duraznos posicionados para no tapar contenido - Solo en espacios vacíos */
+/* posiciones de los duraznos flotantes */
 .floating-peach:nth-child(1) { top: 15%; left: 8%; animation-delay: 0s; }
 .floating-peach:nth-child(2) { top: 8%; right: 30%; animation-delay: 2s; }
 .floating-peach:nth-child(3) { top: 45%; left: 5%; animation-delay: 4s; }
